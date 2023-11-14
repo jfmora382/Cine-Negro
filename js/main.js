@@ -107,3 +107,49 @@
 
 })(jQuery);
 
+
+$(document).ready(function() {
+    var currentIndex = 0;
+    var items = $(".custom-carousel-inner img");
+    var totalItems = items.length;
+  
+    // Muestra la primera imagen al cargar la página
+    items.eq(currentIndex).fadeIn();
+  
+    // Función para mostrar la imagen siguiente
+    function showNext() {
+      if (currentIndex < totalItems - 1) {
+        currentIndex++;
+      } else {
+        currentIndex = 0;
+      }
+      items.fadeOut();
+      items.eq(currentIndex).fadeIn();
+    }
+  
+    // Función para mostrar la imagen anterior
+    function showPrev() {
+      if (currentIndex > 0) {
+        currentIndex--;
+      } else {
+        currentIndex = totalItems - 1;
+      }
+      items.fadeOut();
+      items.eq(currentIndex).fadeIn();
+    }
+  
+    // Event listeners para los botones
+    $(".custom-next").click(showNext);
+    $(".custom-prev").click(showPrev);
+  
+    // Efecto de libro al pasar el ratón sobre el carrusel
+    $(".custom-carousel").hover(
+      function() {
+        $(this).css("transform", "rotateY(180deg)");
+      },
+      function() {
+        $(this).css("transform", "rotateY(0deg)");
+      }
+    );
+  });
+  

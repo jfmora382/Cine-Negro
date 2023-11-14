@@ -13,10 +13,168 @@
      opacity: 1;
  }
 
+body{
+    font-family: 'Lato', sans-serif;
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,700&family=Roboto+Condensed&display=swap');
+
 /*** Spinner End ***/
 
+@font-face {
+    font-family: 'New Athletic';
+    src: url('../font/Athletic/Athletic M54.ttf') format('truetype');
+}
 
 
+@font-face {
+    font-family: 'Mailand';
+    src: url('../font/Mailand/mailand.otf') format('opentype');
+}
+
+
+
+.textoddd {
+    font: bold 90px 'Lato' , 'Nunito', sans-serif , 'Roboto Condensed';
+    text-transform: uppercase;
+    color: #bba368;
+    text-shadow: 
+        0 2px 0 #ffffff,
+        0 4px 0 #dddddd,
+        0 6px 0 #bbbbbb,
+        0 8px 0 #999999,
+        0 10px 0 #777777,
+        0 12px 0 #555555,
+        3px 8px 15px rgba(0, 0, 0, 0.1),
+        3px 8px 5px rgba(0, 0, 0, 0.3);
+    transform: perspective(400px) rotateY(0deg);
+    display: inline-block;
+}
+
+
+
+
+
+@media  (max-width: 1730px) {
+    .textoddd {
+        font-size: 90px !important;
+    }
+
+   
+    .textoddd:nth-child(1) {
+        right: 120px !important;
+    }
+    
+    .textoddd:nth-child(2) {
+        right: 160px !important;
+
+    }
+    
+    .textoddd:nth-child(3) {
+        top: -20px !important;
+        right: -280px !important;
+    }
+}
+
+@media (min-width: 1400px) and (max-width: 1690px) {
+    .textoddd {
+        font-size: 90px !important;
+    }
+
+   
+    .textoddd:nth-child(1) {
+        right: 120px !important;
+    }
+    
+    .textoddd:nth-child(2) {
+        right: 160px !important;
+
+    }
+    
+    .textoddd:nth-child(3) {
+        top: -20px !important;
+        right: -280px !important;
+    }
+}
+
+
+
+
+
+@media (max-width: 1690px) {
+
+    .textoddd {
+        font-size: 90px !important;
+    }
+
+   
+    .textoddd:nth-child(1) {
+        right: 120px !important;
+    }
+    
+    .textoddd:nth-child(2) {
+        right: 160px !important;
+
+    }
+    
+    .textoddd:nth-child(3) {
+        top: -20px !important;
+        right: -280px !important;
+    }
+}
+
+
+@media (max-width: 770px) {
+    .textoddd {
+        font-size: 40px !important;
+    }
+
+
+    .textoddd:nth-child(1) {
+        top: 20px !important; /* Ajusta este valor para el primer span */
+        right: 70px!important;  /* Ajusta este valor para el primer span */
+    }
+    
+    .textoddd:nth-child(2) {
+        top: 70px !important;
+        right: 100px !important;
+
+    }
+    
+    .textoddd:nth-child(3) {
+        top: 70px !important;
+        right: -80px !important;
+    }
+    
+
+}
+
+
+
+
+
+
+/* Libro estilo */
+
+
+
+
+
+
+.m-top{
+    margin-top: 20%;
+}
+
+
+.m-left{
+    margin-left: 5%;
+}
+.text-j{
+    text-align: justify;
+}
 /* Text Color */
 
 .text-gold{
@@ -49,11 +207,22 @@
 }
 
 .bg-img {
-    background-image: url(../img/background.jpg);
+    background-image: url(../img/img_2.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: unset;
     background-repeat: no-repeat;
 }
+
+
+.bg-img-footer {
+    background-image: url(../img/footer_img.jpg);
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+
 
 
 /*** Button Start ***/

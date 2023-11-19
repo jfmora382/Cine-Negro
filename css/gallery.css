@@ -1,0 +1,19 @@
+/* Estilos generales para las imágenes */
+.galeria {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+  }
+  
+  .galeria img {
+    max-width: 400px;
+    padding: 1rem;
+    max-height: 400px;
+    transition: transform 0.3s ease-in-out; /* Añade una transición suave */
+  }
+  
+  /* Efecto de agrandamiento al pasar el mouse (hover) */
+  .galeria img:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al 110% */
+  }
+  

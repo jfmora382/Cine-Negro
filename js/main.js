@@ -1,3 +1,4 @@
+
 (function ($) {
     "use strict";
 
@@ -153,3 +154,62 @@ $(document).ready(function() {
     );
   });
   
+
+
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const paginas = document.querySelectorAll('.pagina');
+    let indiceActual = 0;
+
+    const mostrarPagina = () => {
+        paginas.forEach((pagina, i) => {
+            if (i === indiceActual) {
+                pagina.style.transform = 'translateX(0%)';
+            } else {
+                pagina.style.transform = i < indiceActual ? 'translateX(-100%)' : 'translateX(100%)';
+            }
+        });
+    };
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') {
+            indiceActual = (indiceActual + paginas.length - 1) % paginas.length;
+            mostrarPagina();
+        } else if (e.key === 'ArrowRight') {
+            indiceActual = (indiceActual + 1) % paginas.length;
+            mostrarPagina();
+        }
+    });
+
+    mostrarPagina();
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    var playSongLink = document.getElementById('playSong');
+    var songImage = document.getElementById('songImage');
+    var cancion = document.getElementById('miCancion');
+    var isPlaying = false;
+
+    playSongLink.addEventListener('click', function(event) {
+        event.preventDefault();
+        if (!isPlaying) {
+            cancion.play();
+            isPlaying = true;
+        } else {
+            cancion.pause();
+            cancion.currentTime = 0; // Reinicia la canción al principio
+            isPlaying = false;
+        }
+    });
+
+    // Detener la canción si se hace clic en la imagen
+    songImage.addEventListener('click', function(event) {
+        event.preventDefault();
+        if (isPlaying) {
+            cancion.pause();
+            cancion.currentTime = 0;
+            isPlaying = false;
+        }
+    });
+});

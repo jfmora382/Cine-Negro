@@ -1,23 +1,6 @@
 /*** Spinner Start ***/
 
-#spinner {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity .8s ease-out, visibility 0s linear .5s;
-    z-index: 99999;
- }
 
- #spinner.show {
-     transition: opacity .8s ease-out, visibility 0s linear .0s;
-     visibility: visible;
-     opacity: 1;
- }
-
-body{
-    font-family: 'Lato', sans-serif;
-    font-family: 'Nunito', sans-serif;
-    font-family: 'Roboto Condensed', sans-serif;
-}
 
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,700&family=Roboto+Condensed&display=swap');
@@ -36,9 +19,61 @@ body{
 }
 
 
+@font-face {
+    font-family: 'Zing';
+    src: url('../font/Zing/ZingRustDemo-Base.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Lobster-o';
+    src: url('../font/The-Lobster-Font/fonts/OTF/Lobster.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Lobster-t';
+    src: url('../font/The-Lobster-Font/fonts/TTF/Lobster.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'Botera';
+    src: url('../font/Botera/Botera-RegularStencil.otf') format('opentype');
+}
+
+
+@font-face {
+    font-family: 'Barlow';
+    src: url('../font/Barlow-condensed/BarlowCondensed-Black.ttf') format('truetype');
+}
+
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .8s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+ }
+
+ #spinner.show {
+     transition: opacity .8s ease-out, visibility 0s linear .0s;
+     visibility: visible;
+     opacity: 1;
+ }
+
+*{
+    font-family: 'Botera' !important ;
+}
+
+.fa, .far, .fas {
+    font-family: "Font Awesome 5 Free" !important;
+}
+
+
+.fab {
+    font-family: "Font Awesome 5 Brands" !important;
+}
 
 .textoddd {
-    font: bold 90px 'Lato' , 'Nunito', sans-serif , 'Roboto Condensed';
+    font: bold 100px  'Barlow' , 'Zing' ,'Lobster-t'  !important ;
     text-transform: uppercase;
     color: #bba368;
     text-shadow: 
@@ -55,7 +90,10 @@ body{
 }
 
 
-
+.w-100l {
+    width: 100% !important;
+    height: 700px;
+}
 
 
 @media  (max-width: 1730px) {
@@ -63,19 +101,18 @@ body{
         font-size: 90px !important;
     }
 
-   
     .textoddd:nth-child(1) {
-        right: 120px !important;
+        right: -40px !important;
     }
     
     .textoddd:nth-child(2) {
-        right: 160px !important;
+        right: 0px !important;
 
     }
     
     .textoddd:nth-child(3) {
-        top: -20px !important;
-        right: -280px !important;
+        top: 90px !important;
+        right: 40px !important;
     }
 }
 
@@ -369,6 +406,7 @@ body{
     position: relative;
 }
 
+
 .carousel-item::after {
     content: "";
     width: 100%;
@@ -376,7 +414,7 @@ body{
     position: absolute;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, .6);
+    /* background: rgba(0, 0, 0, .6); */
 }
 
 .carousel-caption {
@@ -398,13 +436,13 @@ body{
     position: absolute;
     top: 50%;
     left: 0;
-    background: carousel-control-pre;
+    
     border-radius: 0 50px 50px 0;
     opacity: 1;
 }
 
 .carousel-control-prev:hover {
-    background: var(--bs-secondary);
+    background: #000000;
     transition: .8s;
 }
 
@@ -414,13 +452,13 @@ body{
     position: absolute;
     top: 50%;
     right: 0;
-    background: var(--bs-primary);
+   
     border-radius: 50px 0 0 50px;
     opacity: 1;
 }
 
 .carousel-control-next:hover {
-    background: var(--bs-secondary);
+    background: #000000;
     transition: .8s;
 }
 
@@ -536,6 +574,9 @@ body{
     padding: 10px 0;
     position: relative;
 }
+
+
+
 
 /* 
 .services-content::after {
@@ -777,9 +818,107 @@ body{
     border: 15px solid #bba368;
 }
 
+
+
+.border-r{
+    border-radius: 2%;
+}
+
+.project-img-2 {
+    position: relative;
+    padding: 15px;
+}
+
+.project-img-2::before {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 5px;
+    left: 1px;
+    background: #bba368;
+    border-radius: 10px;
+    opacity: 1;
+}
+
+.project-img-2::after {
+    content: "";
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    right: 1px;
+    bottom: 5px ;
+    background: #bba368;
+    border-radius: 10px;
+    opacity: 1;
+}
+
+
+
+.m_ig{
+    position: relative;
+    z-index: 1; /* Sobre los pseudo-elementos */
+    height: 256px;
+    border-radius: 5%;
+
+}
+
+.m_ig:hover{
+    transform: scale(1.05); /* Aumenta el tamaño al 110% */
+
+}
+
+
+
+@media (max-width: 492px) {
+    
+
+    .m_ig{
+        position: relative;
+        z-index: 1; /* Sobre los pseudo-elementos */
+        width: 260px !important;
+        height: 256px;
+            
+    }
+
+    .project-img-2 {
+        position: relative;
+        padding: 2px !important;
+    }
+    
+
+
+
+    .project-img-2::before {
+        content: "";
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        top: -7px;
+        left: 17px;
+        background: #bba368;
+        border-radius: 10px;
+        opacity: 1;
+    }
+    
+    .project-img-2::after {
+        content: "";
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        right: 17px;
+        bottom: -7px;
+        background: #bba368;
+        border-radius: 10px;
+        opacity: 1;
+    }
+}
+
 .team-img img {
     border: 10px solid black;
     transition: .5s;
+    width: auto ;
+    height: 356px;
 }
 
 .team-item:hover h4 {
@@ -942,3 +1081,5 @@ body{
 
 
 /*** Footer End ***/
+
+

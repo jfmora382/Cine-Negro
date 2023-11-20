@@ -230,4 +230,3 @@ setInterval(moveFirstToLast, 1500); // Cambiar cada 2,5 segundos, ajusta el tiem
 
 
 
-

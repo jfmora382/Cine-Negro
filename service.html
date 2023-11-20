@@ -26,6 +26,7 @@
 
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
+        <link href="css/gallery.css" rel="stylesheet">
     </head>
 
     <body>
@@ -136,11 +137,32 @@
             </div>
         </div>
     </div> -->
-    <!-- Fact End -->
+
+    <div class="container-fluid py-5 my-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <!-- Columna para el tagline -->
+                <div class="col-lg-5 col-md-6 col-sm-12 wow fadeIn" data-wow-delay=".5s">
+                    <h2 class="mb-4 text-gold text-center">TAGLINE Y CORTOMETRAJE </h2>
+                    <p class="text-j text-center " style="font-size: 30px; color: black;">Descubre un amor que teje entre hilos y desvela secretos</p>
+                </div>
+    
+                <!-- Columna para el cortometraje -->
+                <div class="col-lg-7 col-md-6 col-sm-12 wow fadeIn" data-wow-delay=".5s">
+                    <div class="video-container text-lg-end">
+                        <iframe id="videoFrame" width="560" height="315" src="https://www.youtube.com/embed/bIg77qNKDVk?autoplay=1&mute=1" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
 
 
         <!-- Services Start -->
-        <div class="container-fluid services py-5 mb-5">
+        <!-- <div class="container-fluid services py-5 mb-5">
             <div class="container mt-5">
                 <div class="text-center mx-auto pb-5 wow fadeIn" data-wow-delay=".3s">
                     <h2 class="text-gold">Our Services</h2>
@@ -223,7 +245,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- Services End -->
 
 
@@ -296,6 +318,14 @@
 
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
+        <script>
+            var video = document.getElementById("miVideo");
+
+                video.addEventListener('loadedmetadata', function() {
+                video.volume = 0.2; // Establecer el volumen al 20% después de cargar el video
+                video.muted = false; // Desmutear el video después de establecer el volumen
+                });
+        </script>
     </body>
 
 </html>

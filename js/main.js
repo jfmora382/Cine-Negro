@@ -213,3 +213,21 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+
+const items = document.querySelectorAll('.miItem');
+
+function moveFirstToLast() {
+  const firstItem = document.querySelector('.miItem');
+  if (firstItem) {
+    const clone = firstItem.cloneNode(true);
+    firstItem.remove();
+    document.querySelector('.miCarrusel').appendChild(clone);
+  }
+}
+
+setInterval(moveFirstToLast, 1500); // Cambiar cada 2,5 segundos, ajusta el tiempo según tu preferencia
+
+
+
+
